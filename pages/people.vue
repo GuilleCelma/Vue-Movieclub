@@ -1,7 +1,6 @@
 <template>
-    <div>
-        hoola
-    </div>
+ <Navbar />
+   
 </template>
 
 <script lang="ts">

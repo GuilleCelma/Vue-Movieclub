@@ -46,5 +46,7 @@ export default {
   serverMiddleware: [
     '~/middleware/redirect.js'
   ],
+  buildModules: ['@nuxtjs/tailwindcss']
+  
   
 }
