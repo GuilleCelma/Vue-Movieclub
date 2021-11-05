@@ -1,14 +1,16 @@
 <template>
     <div>
-        hoola
+        hola
     </div>
 </template>
 
-<script lang="ts">
-     
+<script setup lang="ts">
+
+
+    
 
 </script>
 
 <style >
 
-</style>º
+</style>
