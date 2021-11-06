@@ -46,7 +46,18 @@ export default {
   serverMiddleware: [
     '~/middleware/redirect.js'
   ],
-  buildModules: ['@nuxtjs/tailwindcss']
+  buildModules: ['@nuxtjs/tailwindcss'],
+
+ 
+    publicRuntimeConfig: {
+      myPublicVariable: process.env.PUBLIC_VARIABLE,
+    },
+    privateRuntimeConfig: {
+      key: process.env.API_KEY
+    }
+  
+
+
   
   
 }
