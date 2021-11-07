@@ -4,13 +4,12 @@
     <section id="intro" >
       <h2>Top Rated Movies!</h2>
       
+      <div class="flex flex-wrap justify-center items-center">
 
-      <div id="moviesContainer" v-for="movie in movies" :key="movie.title">
-
-        <h2>{{movie.title}}</h2>
-
-
+        <InfoCard id="moviesContainer" v-for="movie in movies" :key="movie.title" :props="movie" /> 
       </div>
+
+      
 
     </section>
 

@@ -37,8 +37,6 @@ export const actions ={
         //Obtener las peliculas de la API
         let movies = await axios.get(url)
 
-        
-
         //Realizar Commit
         commit("setMovies", movies.data.results)
     }
@@ -47,6 +45,8 @@ export const actions ={
 //Mutaciones
 export const mutations ={
     setMovies(state, movies){
+
+        movies.map
         state.movies = movies
     }
 }
