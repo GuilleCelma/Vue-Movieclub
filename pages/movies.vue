@@ -9,8 +9,6 @@
         <InfoCard id="moviesContainer" v-for="movie in movies" :key="movie.title" :props="movie" /> 
       </div>
 
-      
-
     </section>
 
 
@@ -19,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import {mapState,mapGetters, mapActions, mapMutations} from "vuex"
+import {mapState, mapActions} from "vuex"
   
   export default{
     computed: mapState("movies",["movies"]),
@@ -30,9 +28,6 @@ import {mapState,mapGetters, mapActions, mapMutations} from "vuex"
     created(){
        this.loadMovies() 
     }
-
-    
-    
   }
 
 </script>

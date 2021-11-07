@@ -17,35 +17,36 @@ let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}`
 let url = `https://api.themoviedb.org/3/movie/top_rated?api_key=3c59a1bf1cbd14333e0179f3dd37c4db`
 
 
-
+/* interface movie {
+    id:number,
+    title: string,
+    image:string,
+    date: string,
+    description:string,
+    reting:number
+} */
 
 //Estado
 export const state = ()=>({
     movies:[]
 })
 
-//Accessores
-export const getter ={
-    getMovies(state){
-        return state._movies
-    }
-}
+
 
 //Acciones
 export const actions ={
      async loadMovies({commit}){
         //Obtener las peliculas de la API
         let movies = await axios.get(url)
-
+        
         //Realizar Commit
         commit("setMovies", movies.data.results)
     }
-}
+}       
 
 //Mutaciones
 export const mutations ={
     setMovies(state, movies){
-
         movies.map
         state.movies = movies
     }
