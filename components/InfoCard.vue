@@ -2,9 +2,9 @@
 
 
 <div class="infoCard ml-6 mb-6 border-1 bg-black text-white ">
-    
-    <img :src="url + props.poster_path" alt="" />
-    <h1>{{props.title}}</h1>
+
+    <a :href="urlMovie + props.id" target="_blank"><img :src="urlImg + props.poster_path" alt="" /></a>
+    <h1 class="text-sm">{{props.title}}</h1>
     <p>{{props.rating}}</p>
 
 </div>
@@ -21,7 +21,8 @@ export default{
 
     data(){
         return{
-            url:'https://image.tmdb.org/t/p/original',
+            urlImg:'https://image.tmdb.org/t/p/original',
+            urlMovie:'https://www.themoviedb.org/movie/',
             data:this.props
         }
     },
