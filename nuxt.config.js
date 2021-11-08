@@ -34,6 +34,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -46,18 +47,12 @@ export default {
   serverMiddleware: [
     '~/middleware/redirect.js'
   ],
-  buildModules: ['@nuxtjs/tailwindcss'],
 
- 
-    publicRuntimeConfig: {
-      myPublicVariable: process.env.PUBLIC_VARIABLE,
-    },
-    privateRuntimeConfig: {
-      key: process.env.API_KEY
-    }
-  
+  publicRuntimeConfig: {
+    myPublicVariable: process.env.PUBLIC_VARIABLE
+  },
+  privateRuntimeConfig: {
+    key: process.env.API_KEY
+  }
 
-
-  
-  
 }
